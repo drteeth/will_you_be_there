@@ -2,7 +2,7 @@ defmodule WillYouBeThere.Team do
   use WillYouBeThere.Web, :model
 
   schema "teams" do
-    field :name, :string
+    field :name, :string, null: false
 
     timestamps
   end
