@@ -1,4 +1,4 @@
-defmodule WillYouBeThere2.ModelCase do
+defmodule WillYouBeThere.ModelCase do
   @moduledoc """
   This module defines the test case to be used by
   model tests.
@@ -16,18 +16,19 @@ defmodule WillYouBeThere2.ModelCase do
 
   using do
     quote do
-      alias WillYouBeThere2.Repo
+      alias WillYouBeThere.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
-      import WillYouBeThere2.ModelCase
+      import WillYouBeThere.ModelCase
+      import WillYouBeThere.Factory#, except: [build: 1]
     end
   end
 
   setup tags do
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(WillYouBeThere2.Repo, [])
+      Ecto.Adapters.SQL.restart_test_transaction(WillYouBeThere.Repo, [])
     end
 
     :ok
