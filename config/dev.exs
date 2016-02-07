@@ -35,8 +35,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :will_you_be_there2, WillYouBeThere2.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "ben",
+  # password: "postgres",
   database: "will_you_be_there2_dev",
   hostname: "localhost",
   pool_size: 10

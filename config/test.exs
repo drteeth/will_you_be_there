@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :will_you_be_there2, WillYouBeThere2.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "ben",
+  # password: "postgres",
   database: "will_you_be_there2_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
