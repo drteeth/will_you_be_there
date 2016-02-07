@@ -6,12 +6,12 @@
 use Mix.Config
 
 # Configures the endpoint
-config :will_you_be_there2, WillYouBeThere2.Endpoint,
+config :will_you_be_there, WillYouBeThere.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "qUfbyYLHjAk4RxkVMZVhsR9swp8Xg0usL7yU2Kj45JiPoAkhq/TxDPr+oN7Odpjo",
   render_errors: [accepts: ~w(html json)],
-  pubsub: [name: WillYouBeThere2.PubSub,
+  pubsub: [name: WillYouBeThere.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

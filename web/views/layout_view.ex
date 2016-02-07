@@ -1,3 +1,3 @@
-defmodule WillYouBeThere2.LayoutView do
-  use WillYouBeThere2.Web, :view
+defmodule WillYouBeThere.LayoutView do
+  use WillYouBeThere.Web, :view
 end

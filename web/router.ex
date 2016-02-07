@@ -1,5 +1,5 @@
-defmodule WillYouBeThere2.Router do
-  use WillYouBeThere2.Web, :router
+defmodule WillYouBeThere.Router do
+  use WillYouBeThere.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +13,13 @@ defmodule WillYouBeThere2.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", WillYouBeThere2 do
+  scope "/", WillYouBeThere do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", WillYouBeThere2 do
+  # scope "/api", WillYouBeThere do
   #   pipe_through :api
   # end
 end

@@ -1,11 +1,11 @@
-defmodule WillYouBeThere2.Gettext do
+defmodule WillYouBeThere.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](http://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import WillYouBeThere2.Gettext
+      import WillYouBeThere.Gettext
 
       # Simple translation
       gettext "Here is the string to translate"
@@ -20,5 +20,5 @@ defmodule WillYouBeThere2.Gettext do
 
   See the [Gettext Docs](http://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :will_you_be_there2
+  use Gettext, otp_app: :will_you_be_there
 end

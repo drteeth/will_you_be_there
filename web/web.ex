@@ -1,12 +1,12 @@
-defmodule WillYouBeThere2.Web do
+defmodule WillYouBeThere.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use WillYouBeThere2.Web, :controller
-      use WillYouBeThere2.Web, :view
+      use WillYouBeThere.Web, :controller
+      use WillYouBeThere.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -33,12 +33,12 @@ defmodule WillYouBeThere2.Web do
     quote do
       use Phoenix.Controller
 
-      alias WillYouBeThere2.Repo
+      alias WillYouBeThere.Repo
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
-      import WillYouBeThere2.Router.Helpers
-      import WillYouBeThere2.Gettext
+      import WillYouBeThere.Router.Helpers
+      import WillYouBeThere.Gettext
     end
   end
 
@@ -52,9 +52,9 @@ defmodule WillYouBeThere2.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import WillYouBeThere2.Router.Helpers
-      import WillYouBeThere2.ErrorHelpers
-      import WillYouBeThere2.Gettext
+      import WillYouBeThere.Router.Helpers
+      import WillYouBeThere.ErrorHelpers
+      import WillYouBeThere.Gettext
     end
   end
 
@@ -68,10 +68,10 @@ defmodule WillYouBeThere2.Web do
     quote do
       use Phoenix.Channel
 
-      alias WillYouBeThere2.Repo
+      alias WillYouBeThere.Repo
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
-      import WillYouBeThere2.Gettext
+      import WillYouBeThere.Gettext
     end
   end
 

@@ -1,4 +1,4 @@
-# WillYouBeThere2
+# WillYouBeThere
 
 To start your Phoenix app:
 

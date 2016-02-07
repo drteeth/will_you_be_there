@@ -5,7 +5,7 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     WillYouBeThere2.Repo.insert!(%WillYouBeThere2.SomeModel{})
+#     WillYouBeThere.Repo.insert!(%WillYouBeThere.SomeModel{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.

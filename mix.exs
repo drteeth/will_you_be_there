@@ -1,8 +1,8 @@
-defmodule WillYouBeThere2.Mixfile do
+defmodule WillYouBeThere.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :will_you_be_there2,
+    [app: :will_you_be_there,
      version: "0.0.1",
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,7 +17,7 @@ defmodule WillYouBeThere2.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {WillYouBeThere2, []},
+    [mod: {WillYouBeThere, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, :tzdata, :ex_machina]]
   end

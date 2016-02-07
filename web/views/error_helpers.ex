@@ -1,4 +1,4 @@
-defmodule WillYouBeThere2.ErrorHelpers do
+defmodule WillYouBeThere.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -26,10 +26,10 @@ defmodule WillYouBeThere2.ErrorHelpers do
     #
     #     dngettext "errors", "1 file", "%{count} files", count
     #
-    Gettext.dngettext(WillYouBeThere2.Gettext, "errors", msg, msg, opts[:count], opts)
+    Gettext.dngettext(WillYouBeThere.Gettext, "errors", msg, msg, opts[:count], opts)
   end
 
   def translate_error(msg) do
-    Gettext.dgettext(WillYouBeThere2.Gettext, "errors", msg)
+    Gettext.dgettext(WillYouBeThere.Gettext, "errors", msg)
   end
 end

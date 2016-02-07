@@ -1,21 +1,21 @@
-defmodule WillYouBeThere2.ErrorViewTest do
-  use WillYouBeThere2.ConnCase, async: true
+defmodule WillYouBeThere.ErrorViewTest do
+  use WillYouBeThere.ConnCase, async: true
 
   # Bring render/3 and render_to_string/3 for testing custom views
   import Phoenix.View
 
   test "renders 404.html" do
-    assert render_to_string(WillYouBeThere2.ErrorView, "404.html", []) ==
+    assert render_to_string(WillYouBeThere.ErrorView, "404.html", []) ==
            "Page not found"
   end
 
   test "render 500.html" do
-    assert render_to_string(WillYouBeThere2.ErrorView, "500.html", []) ==
+    assert render_to_string(WillYouBeThere.ErrorView, "500.html", []) ==
            "Server internal error"
   end
 
   test "render any other" do
-    assert render_to_string(WillYouBeThere2.ErrorView, "505.html", []) ==
+    assert render_to_string(WillYouBeThere.ErrorView, "505.html", []) ==
            "Server internal error"
   end
 end

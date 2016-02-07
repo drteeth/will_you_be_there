@@ -1,5 +1,5 @@
-defmodule WillYouBeThere2.ErrorView do
-  use WillYouBeThere2.Web, :view
+defmodule WillYouBeThere.ErrorView do
+  use WillYouBeThere.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"
