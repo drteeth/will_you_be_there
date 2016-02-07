@@ -1,0 +1,23 @@
+<h2>Show attendance</h2>
+
+<ul>
+
+  <li>
+    <strong>Game:</strong>
+    <%= @attendance.game %>
+  </li>
+
+  <li>
+    <strong>Member:</strong>
+    <%= @attendance.member %>
+  </li>
+
+  <li>
+    <strong>Status:</strong>
+    <%= @attendance.status %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: attendance_path(@conn, :edit, @attendance) %>
+<%= link "Back", to: attendance_path(@conn, :index) %>

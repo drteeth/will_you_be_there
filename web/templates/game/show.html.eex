@@ -1,0 +1,28 @@
+<h2>Show game</h2>
+
+<ul>
+
+  <li>
+    <strong>Team a:</strong>
+    <%= @game.team_a %>
+  </li>
+
+  <li>
+    <strong>Team b:</strong>
+    <%= @game.team_b %>
+  </li>
+
+  <li>
+    <strong>Start time:</strong>
+    <%= @game.start_time %>
+  </li>
+
+  <li>
+    <strong>Field:</strong>
+    <%= @game.field %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: game_path(@conn, :edit, @game) %>
+<%= link "Back", to: game_path(@conn, :index) %>

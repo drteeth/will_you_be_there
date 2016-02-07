@@ -16,6 +16,11 @@ defmodule WillYouBeThere.Router do
   scope "/", WillYouBeThere do
     pipe_through :browser # Use the default browser stack
 
+    resources "/teams", TeamController
+    resources "/games", GameController
+    resources "/users", UserController
+    resources "/members", MemberController
+    resources "/attendance", AttendanceController
   end
 
   # Other scopes may use custom stacks.
