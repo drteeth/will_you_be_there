@@ -27,7 +27,7 @@ defmodule WillYouBeThere.GameControllerTest do
   end
 
   test "shows chosen resource", %{conn: conn} do
-    game = Repo.insert! %Game{}
+    game = create(:game)
     conn = get conn, game_path(conn, :show, game)
     assert html_response(conn, 200) =~ "Show game"
   end
@@ -39,26 +39,26 @@ defmodule WillYouBeThere.GameControllerTest do
   end
 
   test "renders form for editing chosen resource", %{conn: conn} do
-    game = Repo.insert! %Game{}
+    game = create(:game)
     conn = get conn, game_path(conn, :edit, game)
     assert html_response(conn, 200) =~ "Edit game"
   end
 
   test "updates chosen resource and redirects when data is valid", %{conn: conn} do
-    game = Repo.insert! %Game{}
+    game = create(:game)
     conn = put conn, game_path(conn, :update, game), game: @valid_attrs
     assert redirected_to(conn) == game_path(conn, :show, game)
     assert Repo.get_by(Game, @valid_attrs)
   end
 
   test "does not update chosen resource and renders errors when data is invalid", %{conn: conn} do
-    game = Repo.insert! %Game{}
+    game = create(:game)
     conn = put conn, game_path(conn, :update, game), game: @invalid_attrs
     assert html_response(conn, 200) =~ "Edit game"
   end
 
   test "deletes chosen resource", %{conn: conn} do
-    game = Repo.insert! %Game{}
+    game = create(:game)
     conn = delete conn, game_path(conn, :delete, game)
     assert redirected_to(conn) == game_path(conn, :index)
     refute Repo.get(Game, game.id)

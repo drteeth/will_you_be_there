@@ -6,7 +6,7 @@ defmodule WillYouBeThere.GameController do
   plug :scrub_params, "game" when action in [:create, :update]
 
   def index(conn, _params) do
-    games = Repo.all(Game)
+    games = Repo.all(Game) |> Repo.preload([:team_a, :team_b])
     render(conn, "index.html", games: games)
   end
 
@@ -29,7 +29,7 @@ defmodule WillYouBeThere.GameController do
   end
 
   def show(conn, %{"id" => id}) do
-    game = Repo.get!(Game, id)
+    game = Repo.get!(Game, id) |> Repo.preload([:team_a, :team_b])
     render(conn, "show.html", game: game)
   end
 

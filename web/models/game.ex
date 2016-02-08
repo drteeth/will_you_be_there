@@ -4,13 +4,13 @@ defmodule WillYouBeThere.Game do
   schema "games" do
     field :start_time, Ecto.DateTime
     field :field, :string
-    belongs_to :team_a, WillYouBeThere.TeamA
-    belongs_to :team_b, WillYouBeThere.TeamB
+    belongs_to :team_a, WillYouBeThere.Teaw
+    belongs_to :team_b, WillYouBeThere.Team
 
     timestamps
   end
 
-  @required_fields ~w(start_time field)
+  @required_fields ~w(start_time field team_a team_b)
   @optional_fields ~w()
 
   @doc """
