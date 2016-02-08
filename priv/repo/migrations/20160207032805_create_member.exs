@@ -4,8 +4,8 @@ defmodule WillYouBeThere.Repo.Migrations.CreateMember do
   def change do
     create table(:members, primary_key: false) do
       add :id, :binary_id, primary_key: true
-      add :team_id, references(:teams, on_delete: :nothing, type: :binary_id), null: false
-      add :user_id, references(:users, on_delete: :nothing, type: :binary_id), null: false
+      add :team_id, references(:teams, on_delete: :nothing, type: :binary_id)
+      add :user_id, references(:users, on_delete: :nothing, type: :binary_id)
 
       timestamps
     end

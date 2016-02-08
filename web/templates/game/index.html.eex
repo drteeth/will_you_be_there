@@ -3,8 +3,8 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Team a</th>
-      <th>Team b</th>
+      <th>Home</th>
+      <th>Visitor</th>
       <th>Start time</th>
       <th>Field</th>
 
@@ -14,8 +14,8 @@
   <tbody>
 <%= for game <- @games do %>
     <tr>
-      <td><%= game.team_a %></td>
-      <td><%= game.team_b %></td>
+      <td><%= game.home_id %></td>
+      <td><%= game.visitor_id %></td>
       <td><%= game.start_time %></td>
       <td><%= game.field %></td>
 

@@ -14,8 +14,8 @@ defmodule WillYouBeThere.Factory do
     %Game{
       start_time: Ecto.DateTime.utc,
       field: "Field #3",
-      team_a: build(:team),
-      team_b: build(:team),
+      home: build(:team),
+      visitor: build(:team),
     }
   end
 

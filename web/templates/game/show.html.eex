@@ -3,13 +3,13 @@
 <ul>
 
   <li>
-    <strong>Team a:</strong>
-    <%= @game.team_a %>
+    <strong>Home:</strong>
+    <%= @game.home_id %>
   </li>
 
   <li>
-    <strong>Team b:</strong>
-    <%= @game.team_b %>
+    <strong>Visitor:</strong>
+    <%= @game.visitor_id %>
   </li>
 
   <li>
