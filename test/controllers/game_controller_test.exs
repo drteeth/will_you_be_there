@@ -53,7 +53,7 @@ defmodule WillYouBeThere.GameControllerTest do
 
   test "does not update chosen resource and renders errors when data is invalid", %{conn: conn} do
     game = create(:game)
-    conn = put conn, game_path(conn, :update, game), game: @invalid_attrs
+    conn = put conn, game_path(conn, :update, game), game: %{field: nil}
     assert html_response(conn, 200) =~ "Edit game"
   end
 
