@@ -18,9 +18,16 @@ defmodule WillYouBeThere.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {WillYouBeThere, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :tzdata, :ex_machina]]
+     applications: app_list(Mix.env)]
   end
+
+  def app_list do
+    [:phoenix, :phoenix_html, :cowboy, :logger, :gettext, :phoenix_ecto,
+      :postgrex, :tzdata, :ex_machina]
+  end
+
+  def app_list(:test), do: [:hound | app_list]
+  def app_list(_),     do: app_list
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
@@ -37,7 +44,7 @@ defmodule WillYouBeThere.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:hound, "~> 0.7"},
+     {:hound, "~> 0.8"},
      {:timex, "~> 1.0"},
      {:ex_machina, "~> 0.6.1"} # TODO only: :test ?
     ]
